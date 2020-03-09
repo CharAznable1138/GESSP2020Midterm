@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - PlayerProjectile
+  - EnemyProjectile
+  - Projectile
+  - Enemy
+  - Medkit
+  - SpeedPowerup
   layers:
   - Default
   - TransparentFX
