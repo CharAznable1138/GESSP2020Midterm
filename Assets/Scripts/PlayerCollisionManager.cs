@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollisionManager : MonoBehaviour
 {
-    private int Health = 10;
+    private int Health = 100;
     private PlayerController playerController;
     private LaunchProjectile Launcher;
     private RotateTurret rotateTurret;
@@ -12,6 +13,8 @@ public class PlayerCollisionManager : MonoBehaviour
     private EnemySpawnManager enemySpawnerScript;
     [SerializeField] GameObject medkitSpawner;
     private MedkitSpawnManager medkitSpawnerScript;
+    [SerializeField] GameObject healthDisplay;
+    private Text healthText;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,8 @@ public class PlayerCollisionManager : MonoBehaviour
         Launcher = GetComponentInChildren<LaunchProjectile>();
         rotateTurret = GetComponentInChildren<RotateTurret>();
         medkitSpawnerScript = medkitSpawner.GetComponent<MedkitSpawnManager>();
+        healthText = healthDisplay.GetComponent<Text>();
+        healthText.text = $"Structural Integrity: {Health}%";
     }
 
     // Update is called once per frame
@@ -33,8 +38,9 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
             Destroy(collision.gameObject);
-            Health --;
-            Debug.Log($"Player just took 1 damage and has {Health} health remaining.");
+            Health -= 10;
+            //Debug.Log($"Player just took 1 damage and has {Health} health remaining.");
+            healthText.text = $"Structural Integrity: {Health}%";
             if(Health <= 0)
             {
                 Health = 0;
@@ -49,12 +55,13 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("Medkit"))
         {
             Destroy(collision.gameObject);
-            Health += 10;
-            if (Health >= 10)
+            Health += 100;
+            if (Health >= 100)
             {
-                Health = 10;
+                Health = 100;
             }
-            Debug.Log($"Player just got a medkit and has been restored to {Health} health.");
+            healthText.text = $"Structural Integrity: {Health}%";
+            //Debug.Log($"Player just got a medkit and has been restored to {Health} health.");
         }
     }
 }
