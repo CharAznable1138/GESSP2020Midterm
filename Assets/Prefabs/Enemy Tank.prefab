@@ -648,8 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e551b61e6989c14392e535ff12bf0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5556563325023363288, guid: 07a3f2c76c7d3c049808b82b8421e75a,
+  bulletPrefab: {fileID: 1804944054732130628, guid: f4c2ca66434833c4ab28017a9fefa380,
     type: 3}
   startDelay: 1.5
   repeatRate: 1.5
-  rotationModifier: 1

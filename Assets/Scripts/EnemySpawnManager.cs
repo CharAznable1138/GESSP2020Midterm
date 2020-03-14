@@ -29,19 +29,19 @@ public class EnemySpawnManager : MonoBehaviour
 
     void SpawnEnemyTop()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
     }
 
     void SpawnEnemyLeft()
     {
-        Vector3 spawnPos = new Vector3(spawnPosX, 1, Random.Range(spawnRangeZNega, spawnRangeZPosi));
+        Vector3 spawnPos = new Vector3(spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
         Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 270, 0));
     }
 
     void SpawnEnemyRight()
     {
-        Vector3 spawnPos = new Vector3(-spawnPosX, 1, Random.Range(spawnRangeZNega, spawnRangeZPosi));
+        Vector3 spawnPos = new Vector3(-spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
         Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 90, 0));
     }
 }

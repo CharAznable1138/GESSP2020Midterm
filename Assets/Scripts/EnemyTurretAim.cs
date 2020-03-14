@@ -10,7 +10,7 @@ public class EnemyTurretAim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        playerObject = GameObject.FindGameObjectWithTag("PlayerTurret");
     }
 
     // Update is called once per frame
