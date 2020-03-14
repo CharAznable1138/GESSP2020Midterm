@@ -18,7 +18,7 @@ public class PlayerCollisionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponentInParent<PlayerController>();
         enemySpawnerScript = enemySpawner.GetComponent<EnemySpawnManager>();
         Launcher = GetComponentInChildren<LaunchProjectile>();
         rotateTurret = GetComponentInChildren<RotateTurret>();
@@ -38,7 +38,14 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
             Destroy(collision.gameObject);
-            Health -= 10;
+            if (Health > 0)
+            {
+                Health -= 10;
+            }
+            else
+            {
+                Health = 0;
+            }
             //Debug.Log($"Player just took 1 damage and has {Health} health remaining.");
             healthText.text = $"Structural Integrity: {Health}%";
             if(Health <= 0)

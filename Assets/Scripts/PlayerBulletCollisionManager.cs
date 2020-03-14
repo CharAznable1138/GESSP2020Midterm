@@ -24,8 +24,8 @@ public class PlayerBulletCollisionManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            //Destroy(gameObject);
+            //Destroy(collision.gameObject);
             //Debug.Log("Just killed an enemy");
             scoreManager.Score++;
         }
