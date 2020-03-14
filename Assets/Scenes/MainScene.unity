@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce6630ab8250ae48b35d7b261c7b70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  medkitPrefab: {fileID: 3190257980396329270, guid: f6b9c6cd833f0854aa3a289d70c1ea0a,
+  medkitPrefab: {fileID: 6255746943056943349, guid: 046511661cad76e489143c6f986dcc51,
     type: 3}
   startDelay: 10
   repeatRate: 10
@@ -634,10 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86014fcfc4f9b7439105bac245ff356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 2649786023796562613, guid: 011e86daa55b48a4ebe2801010b193dd,
+  bulletPrefab: {fileID: 2083803248234682428, guid: 731fa108ddcec99409881f42b76b5432,
     type: 3}
-  rotationModifier: 1
-  zOffset: 0
 --- !u!1 &1157008164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1194,7 @@ GameObject:
   - component: {fileID: 581379643}
   m_Layer: 0
   m_Name: Mini War Tank
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,7 +1230,7 @@ GameObject:
   - component: {fileID: 943127787}
   m_Layer: 0
   m_Name: Artillery
-  m_TagString: Untagged
+  m_TagString: PlayerTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

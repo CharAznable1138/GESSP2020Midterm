@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Medkit
   - SpeedPowerup
+  - PlayerChassis
+  - PlayerTurret
   layers:
   - Default
   - TransparentFX
