@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+public class MenuButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;

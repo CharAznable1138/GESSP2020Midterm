@@ -30,7 +30,18 @@ public class PlayerCollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Health > 70)
+        {
+            healthText.color = new Color32(0, 255, 52, 255);
+        }
+        else if (Health > 40)
+        {
+            healthText.color = new Color32(255, 227, 0, 255);
+        }
+        else
+        {
+            healthText.color = new Color32(255, 10, 0, 255);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

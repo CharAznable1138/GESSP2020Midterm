@@ -7,10 +7,12 @@ public class EnemyTurretAim : MonoBehaviour
 {
     private GameObject playerObject;
     [SerializeField] float lowerBound = 1;
+    private EnemyLaunchProjectile bulletSpawner;
     // Start is called before the first frame update
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("PlayerTurret");
+        bulletSpawner = GetComponentInChildren <EnemyLaunchProjectile>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class EnemyTurretAim : MonoBehaviour
         else
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            bulletSpawner.CancelInvoke();
         }
     }
 
