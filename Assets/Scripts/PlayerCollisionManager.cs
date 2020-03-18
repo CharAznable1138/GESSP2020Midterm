@@ -15,6 +15,10 @@ public class PlayerCollisionManager : MonoBehaviour
     private MedkitSpawnManager medkitSpawnerScript;
     [SerializeField] GameObject healthDisplay;
     private Text healthText;
+    [SerializeField] GameObject HUD;
+    [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject finalScoreDisplay;
+    private FinalScoreDisplay finalScoreDisplayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,7 @@ public class PlayerCollisionManager : MonoBehaviour
         medkitSpawnerScript = medkitSpawner.GetComponent<MedkitSpawnManager>();
         healthText = healthDisplay.GetComponent<Text>();
         healthText.text = $"Structural Integrity: {Health}%";
+        finalScoreDisplayer = finalScoreDisplay.GetComponent<FinalScoreDisplay>();
     }
 
     // Update is called once per frame
@@ -67,7 +72,10 @@ public class PlayerCollisionManager : MonoBehaviour
                 rotateTurret.enabled = false;
                 medkitSpawnerScript.CancelInvoke();
                 enemySpawnerScript.CancelInvoke();
-                Debug.Log("Game over, man! Game over!");
+                //Debug.Log("Game over, man! Game over!");
+                HUD.SetActive(false);
+                gameOverScreen.SetActive(true);
+                finalScoreDisplayer.Invoke("ShowFinalScore", 0);
             }
         }
         if(collision.gameObject.CompareTag("Medkit"))

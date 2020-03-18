@@ -9,10 +9,7 @@ public class MenuButtonManager : MonoBehaviour
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject credits;
     [SerializeField] GameObject instructions;
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
+    public void StartGame() => SceneManager.LoadScene(1);
 
     public void QuitGame()
     {
