@@ -1365,7 +1365,10 @@ MonoBehaviour:
 
 
     Medkit Models by Archelaus (Website: https://www.artstation.com/archelaus, Contact:
-    http://twitter.com/ArchelausAssets)'
+    http://twitter.com/ArchelausAssets)
+
+
+    UI Assets & Fonts By Kenney Assets (website: https://www.Kenney.nl)'
 --- !u!222 &815120525
 CanvasRenderer:
   m_ObjectHideFlags: 0
