@@ -1466,7 +1466,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Main Menu Music:\nThe Descent by Kevin MacLeod\r\nLink: https://incompetech.filmmusic.io/song/4490-the-descent\r\nLicense:
-    http://creativecommons.org/licenses/by/4.0/"
+    http://creativecommons.org/licenses/by/4.0/\n\nLevel Music:\nHitman by Kevin MacLeod\r\nLink:
+    https://incompetech.filmmusic.io/song/3880-hitman\r\nLicense: http://creativecommons.org/licenses/by/4.0/"
 --- !u!222 &537924389
 CanvasRenderer:
   m_ObjectHideFlags: 0

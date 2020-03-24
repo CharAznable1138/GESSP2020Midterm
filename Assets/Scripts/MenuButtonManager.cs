@@ -26,6 +26,7 @@ public class MenuButtonManager : MonoBehaviour
     public void MainMenu()
     {
         credits.SetActive(false);
+        moreCredits.SetActive(false);
         instructions.SetActive(false);
         mainMenu.SetActive(true);
     }
