@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 19820710, guid: f66e014454bdeb942944471c5e19da6c, type: 3}
+      propertyPath: lengthInSec
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 19838316, guid: f66e014454bdeb942944471c5e19da6c, type: 3}
       propertyPath: playOnAwake
       value: 1
@@ -1615,6 +1619,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 484060196}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297149901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297149898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297dff1cf33fd8640b43e8045a95038f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1465114474
 GameObject:
   m_ObjectHideFlags: 0

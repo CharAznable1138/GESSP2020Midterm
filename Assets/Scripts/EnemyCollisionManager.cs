@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyCollisionManager : MonoBehaviour
 {
+    [SerializeField] GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class EnemyCollisionManager : MonoBehaviour
     {
         if(other.gameObject.CompareTag("PlayerProjectile"))
         {
+            Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
