@@ -1454,7 +1454,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 78077158409c655439cb1736740e627e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1467,7 +1467,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Main Menu Music:\nThe Descent by Kevin MacLeod\r\nLink: https://incompetech.filmmusic.io/song/4490-the-descent\r\nLicense:
     http://creativecommons.org/licenses/by/4.0/\n\nLevel Music:\nHitman by Kevin MacLeod\r\nLink:
-    https://incompetech.filmmusic.io/song/3880-hitman\r\nLicense: http://creativecommons.org/licenses/by/4.0/"
+    https://incompetech.filmmusic.io/song/3880-hitman\r\nLicense: http://creativecommons.org/licenses/by/4.0/\n\nGame
+    Over Music:\nVirtutes Instrumenti by Kevin MacLeod\r\nLink: https://incompetech.filmmusic.io/song/4590-virtutes-instrumenti\r\nLicense:
+    http://creativecommons.org/licenses/by/4.0/"
 --- !u!222 &537924389
 CanvasRenderer:
   m_ObjectHideFlags: 0
