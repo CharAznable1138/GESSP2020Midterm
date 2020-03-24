@@ -19,6 +19,9 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject finalScoreDisplay;
     private FinalScoreDisplay finalScoreDisplayer;
+    [SerializeField] GameObject smoke;
+    [SerializeField] GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +73,8 @@ public class PlayerCollisionManager : MonoBehaviour
                 playerController.enabled = false;
                 Launcher.enabled = false;
                 rotateTurret.enabled = false;
+                explosion.SetActive(true);
+                smoke.SetActive(true);
                 medkitSpawnerScript.CancelInvoke();
                 enemySpawnerScript.CancelInvoke();
                 //Debug.Log("Game over, man! Game over!");
