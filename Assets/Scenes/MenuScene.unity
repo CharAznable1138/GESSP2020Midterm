@@ -2069,7 +2069,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 78077158409c655439cb1736740e627e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2091,6 +2091,10 @@ MonoBehaviour:
 
 
     Cannon firing noise by Gary Qian, AKA Cyberkinetic Films (Website: http://www.youtube.com/user/cyberkineticfilms)
+
+
+    Particle effects by Moonflower Carnivore (Website: https://www.facebook.com/MoonflowerCarnivore,
+    Contact: moonflowercarnivore@gmail.com)
 
 
     UI Assets & Fonts By Kenney Assets (website: https://www.Kenney.nl)'
