@@ -3943,7 +3943,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Enemy tank explosion sound by FlashTrauma (Website: https://freesound.org/people/FlashTrauma/)'
+  m_Text: 'Enemy tank explosion sound by FlashTrauma (Website: https://freesound.org/people/FlashTrauma/)
+
+
+    Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0

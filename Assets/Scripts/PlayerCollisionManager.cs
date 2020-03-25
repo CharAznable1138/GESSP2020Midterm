@@ -21,6 +21,8 @@ public class PlayerCollisionManager : MonoBehaviour
     private FinalScoreDisplay finalScoreDisplayer;
     [SerializeField] GameObject smoke;
     [SerializeField] GameObject explosion;
+    private AudioSource explosionSound;
+    private bool gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class PlayerCollisionManager : MonoBehaviour
         healthText = healthDisplay.GetComponent<Text>();
         healthText.text = $"Structural Integrity: {Health}%";
         finalScoreDisplayer = finalScoreDisplay.GetComponent<FinalScoreDisplay>();
+        explosionSound = GetComponent<AudioSource>();
+        gameOver = false;
     }
 
     // Update is called once per frame
@@ -67,12 +71,14 @@ public class PlayerCollisionManager : MonoBehaviour
             }
             //Debug.Log($"Player just took 1 damage and has {Health} health remaining.");
             healthText.text = $"Structural Integrity: {Health}%";
-            if(Health <= 0)
+            if(gameOver == false && Health <= 0)
             {
+                gameOver = true;
                 Health = 0;
                 playerController.enabled = false;
                 Launcher.enabled = false;
                 rotateTurret.enabled = false;
+                explosionSound.Play();
                 explosion.SetActive(true);
                 smoke.SetActive(true);
                 medkitSpawnerScript.CancelInvoke();
