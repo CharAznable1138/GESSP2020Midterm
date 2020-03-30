@@ -3946,7 +3946,10 @@ MonoBehaviour:
   m_Text: 'Enemy tank explosion sound by FlashTrauma (Website: https://freesound.org/people/FlashTrauma/)
 
 
-    Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)'
+    Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)
+
+
+    Desert terrain texture by Casual2D (Website: http://casual2d.com/, Contact: casual2d@protonmail.com)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0
