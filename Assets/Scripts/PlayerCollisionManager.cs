@@ -22,7 +22,7 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] GameObject smoke;
     [SerializeField] GameObject explosion;
     private AudioSource explosionSound;
-    private bool gameOver;
+    internal bool gameOver;
 
     // Start is called before the first frame update
     void Start()
