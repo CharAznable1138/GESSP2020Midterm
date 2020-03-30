@@ -3949,7 +3949,11 @@ MonoBehaviour:
     Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)
 
 
-    Desert terrain texture by Casual2D (Website: http://casual2d.com/, Contact: casual2d@protonmail.com)'
+    Desert terrain texture by Casual2D (Website: http://casual2d.com/, Contact: casual2d@protonmail.com)
+
+
+    Hit sounds by Morgan Purkis (Freesound: https://freesound.org/people/morganpurkis/,
+    Steam: https://steamcommunity.com/profiles/76561198053175145)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0
