@@ -3957,7 +3957,10 @@ MonoBehaviour:
     Steam: https://steamcommunity.com/profiles/76561198053175145)
 
 
-    Low health alert sound by ThisUsernameIs (Freesound: https://freesound.org/people/thisusernameis/)'
+    Low health alert sound by ThisUsernameIs (Freesound: https://freesound.org/people/thisusernameis/)
+
+
+    Medkit pickup sound by SevenBSB (Freesound: https://freesound.org/people/sevenbsb/)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0

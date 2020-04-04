@@ -24,6 +24,7 @@ public class PlayerCollisionManager : MonoBehaviour
     private AudioSource hitSound;
     internal bool gameOver;
     private AudioSource lowHealthNoise;
+    private AudioSource repairNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class PlayerCollisionManager : MonoBehaviour
         hitSound = GetComponent<AudioSource>();
         gameOver = false;
         lowHealthNoise = healthDisplay.GetComponent<AudioSource>();
+        repairNoise = medkitSpawner.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,6 +99,10 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("Medkit"))
         {
             Destroy(collision.gameObject);
+            if(Health < 100)
+            {
+                repairNoise.Play();
+            }
             Health += 100;
             if (Health >= 100)
             {
