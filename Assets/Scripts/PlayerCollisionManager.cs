@@ -23,6 +23,7 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] GameObject explosion;
     private AudioSource hitSound;
     internal bool gameOver;
+    private AudioSource lowHealthNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -37,22 +38,26 @@ public class PlayerCollisionManager : MonoBehaviour
         finalScoreDisplayer = finalScoreDisplay.GetComponent<FinalScoreDisplay>();
         hitSound = GetComponent<AudioSource>();
         gameOver = false;
+        lowHealthNoise = healthDisplay.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Health > 70)
+        if(Health > 80)
         {
             healthText.color = new Color32(0, 255, 52, 255);
+            lowHealthNoise.enabled = false;
         }
-        else if (Health > 40)
+        else if (Health > 50)
         {
             healthText.color = new Color32(255, 227, 0, 255);
+            lowHealthNoise.enabled = false;
         }
         else
         {
             healthText.color = new Color32(255, 10, 0, 255);
+            lowHealthNoise.enabled = true;
         }
     }
 

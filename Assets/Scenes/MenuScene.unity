@@ -2082,20 +2082,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tank Models by A3D (Website: https://www.artstation.com/a3d, Contact: a3deve@gmail.com)
+  m_Text: 'Tank Models by A3D (ArtStation: https://www.artstation.com/a3d, Contact:
+    a3deve@gmail.com)
 
 
     Projectile Models by AurynSky (Website: http://www.aurynsky.com, Contact: Aurynskygames@gmail.com)
 
 
-    Medkit Models by Archelaus (Website: https://www.artstation.com/archelaus, Contact:
-    http://twitter.com/ArchelausAssets)
+    Medkit Models by Archelaus (ArtStation: https://www.artstation.com/archelaus,
+    Contact: http://twitter.com/ArchelausAssets)
 
 
-    Cannon firing noise by Gary Qian, AKA Cyberkinetic Films (Website: http://www.youtube.com/user/cyberkineticfilms)
+    Cannon firing noise by Gary Qian, AKA Cyberkinetic Films (Youtube: http://www.youtube.com/user/cyberkineticfilms)
 
 
-    Particle effects by Moonflower Carnivore (Website: https://www.facebook.com/MoonflowerCarnivore,
+    Particle effects by Moonflower Carnivore (Facebook: https://www.facebook.com/MoonflowerCarnivore,
     Contact: moonflowercarnivore@gmail.com)
 
 
@@ -3943,7 +3944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Enemy tank explosion sound by FlashTrauma (Website: https://freesound.org/people/FlashTrauma/)
+  m_Text: 'Enemy tank explosion sound by FlashTrauma (Freesound: https://freesound.org/people/FlashTrauma/)
 
 
     Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)
@@ -3953,7 +3954,10 @@ MonoBehaviour:
 
 
     Hit sounds by Morgan Purkis (Freesound: https://freesound.org/people/morganpurkis/,
-    Steam: https://steamcommunity.com/profiles/76561198053175145)'
+    Steam: https://steamcommunity.com/profiles/76561198053175145)
+
+
+    Low health alert sound by ThisUsernameIs (Freesound: https://freesound.org/people/thisusernameis/)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0
