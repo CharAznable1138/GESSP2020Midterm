@@ -18,7 +18,7 @@ public class MenuButtonManager : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #else
-        Application.Quit()
+        Application.Quit();
         #endif
         //Note to self: Got this exit code from this website: https://answers.unity.com/questions/161858/startstop-playmode-from-editor-script.html
         //Must double-check if it actually works
