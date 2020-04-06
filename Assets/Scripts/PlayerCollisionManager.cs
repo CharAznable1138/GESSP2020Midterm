@@ -101,7 +101,10 @@ public class PlayerCollisionManager : MonoBehaviour
             Destroy(collision.gameObject);
             if(Health < 100)
             {
-                repairNoise.Play();
+                if (!gameOver)
+                {
+                    repairNoise.Play();
+                }
             }
             Health += 100;
             if (Health >= 100)
