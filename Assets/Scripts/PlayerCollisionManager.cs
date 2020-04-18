@@ -85,7 +85,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 explosion.SetActive(true);
                 deathSmoke.SetActive(true);
                 medkitSpawnerScript.CancelInvoke();
-                enemySpawnerScript.CancelInvoke();
+                enemySpawnerScript.StopAllCoroutines();
                 fire.SetActive(false);
                 damageSmoke.SetActive(false);
                 HUD.SetActive(false);

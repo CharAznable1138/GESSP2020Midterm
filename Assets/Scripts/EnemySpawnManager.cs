@@ -13,12 +13,17 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField] float spawnPosX = 20.3f;
     [SerializeField] float spawnRangeZPosi = 20;
     [SerializeField] float spawnRangeZNega = -10;
+    [SerializeField] float minRepeatTime = 1;
+    [SerializeField] float maxRepeatTime = 10;
+    [SerializeField] GameObject player;
+    private PlayerCollisionManager playerCollisionManager;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnEnemyTop", startDelayTop, repeatRate);
-        InvokeRepeating("SpawnEnemyLeft", startDelaySides, repeatRate);
-        InvokeRepeating("SpawnEnemyRight", startDelaySides, repeatRate);
+        playerCollisionManager = player.GetComponentInChildren<PlayerCollisionManager>();
+        StartCoroutine("SpawnEnemyTop");
+        StartCoroutine("SpawnEnemyLeft");
+        StartCoroutine("SpawnEnemyRight");
     }
 
     // Update is called once per frame
@@ -27,21 +32,39 @@ public class EnemySpawnManager : MonoBehaviour
         
     }
 
-    void SpawnEnemyTop()
+    IEnumerator SpawnEnemyTop()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-        Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
+        while (!playerCollisionManager.gameOver)
+        {
+            float waitTime = Random.Range(minRepeatTime, maxRepeatTime);
+            yield return new WaitForSeconds(waitTime);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+            Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
+        }
+        yield return null;
     }
 
-    void SpawnEnemyLeft()
+    IEnumerator SpawnEnemyLeft()
     {
-        Vector3 spawnPos = new Vector3(spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
-        Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 270, 0));
+        while (!playerCollisionManager.gameOver)
+        {
+            float waitTime = Random.Range(minRepeatTime, maxRepeatTime);
+            yield return new WaitForSeconds(waitTime);
+            Vector3 spawnPos = new Vector3(spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
+            Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 270, 0));
+        }
+        yield return null;
     }
 
-    void SpawnEnemyRight()
+    IEnumerator SpawnEnemyRight()
     {
-        Vector3 spawnPos = new Vector3(-spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
-        Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 90, 0));
+        while (!playerCollisionManager.gameOver)
+        {
+            float waitTime = Random.Range(minRepeatTime, maxRepeatTime);
+            yield return new WaitForSeconds(waitTime);
+            Vector3 spawnPos = new Vector3(-spawnPosX, 0, Random.Range(spawnRangeZNega, spawnRangeZPosi));
+            Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, 90, 0));
+        }
+        yield return null;
     }
 }
