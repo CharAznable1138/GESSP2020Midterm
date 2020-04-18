@@ -24,16 +24,12 @@ public class PlayerBulletCollisionManager : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //Destroy(gameObject);
-            //Destroy(collision.gameObject);
-            //Debug.Log("Just killed an enemy");
             scoreManager.Score++;
         }
         if (collision.gameObject.CompareTag("EnemyProjectile"))
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            //Debug.Log("Two bullets just collided & destroyed each other");
         }
     }
 }

@@ -19,12 +19,14 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject finalScoreDisplay;
     private FinalScoreDisplay finalScoreDisplayer;
-    [SerializeField] GameObject smoke;
+    [SerializeField] GameObject deathSmoke;
     [SerializeField] GameObject explosion;
     private AudioSource hitSound;
     internal bool gameOver;
     private AudioSource lowHealthNoise;
     private AudioSource repairNoise;
+    [SerializeField] GameObject damageSmoke;
+    [SerializeField] GameObject fire;
 
     // Start is called before the first frame update
     void Start()
@@ -50,16 +52,22 @@ public class PlayerCollisionManager : MonoBehaviour
         {
             healthText.color = new Color32(0, 255, 52, 255);
             lowHealthNoise.enabled = false;
+            damageSmoke.SetActive(false);
+            fire.SetActive(false);
         }
         else if (Health > 50)
         {
             healthText.color = new Color32(255, 227, 0, 255);
             lowHealthNoise.enabled = false;
+            damageSmoke.SetActive(true);
+            fire.SetActive(false);
         }
         else
         {
             healthText.color = new Color32(255, 10, 0, 255);
             lowHealthNoise.enabled = true;
+            damageSmoke.SetActive(false);
+            fire.SetActive(true);
         }
     }
 
@@ -77,7 +85,6 @@ public class PlayerCollisionManager : MonoBehaviour
             {
                 Health = 0;
             }
-            //Debug.Log($"Player just took 1 damage and has {Health} health remaining.");
             healthText.text = $"Structural Integrity: {Health}%";
             if(gameOver == false && Health <= 0)
             {
@@ -87,10 +94,11 @@ public class PlayerCollisionManager : MonoBehaviour
                 Launcher.enabled = false;
                 rotateTurret.enabled = false;
                 explosion.SetActive(true);
-                smoke.SetActive(true);
+                deathSmoke.SetActive(true);
                 medkitSpawnerScript.CancelInvoke();
                 enemySpawnerScript.CancelInvoke();
-                //Debug.Log("Game over, man! Game over!");
+                fire.SetActive(false);
+                damageSmoke.SetActive(false);
                 HUD.SetActive(false);
                 gameOverScreen.SetActive(true);
                 finalScoreDisplayer.Invoke("ShowFinalScore", 0);
@@ -112,7 +120,6 @@ public class PlayerCollisionManager : MonoBehaviour
                 Health = 100;
             }
             healthText.text = $"Structural Integrity: {Health}%";
-            //Debug.Log($"Player just got a medkit and has been restored to {Health} health.");
         }
     }
 }
