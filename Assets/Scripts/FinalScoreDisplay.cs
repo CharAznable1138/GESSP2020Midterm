@@ -15,7 +15,7 @@ public class FinalScoreDisplay : MonoBehaviour
         finalScoreText = GetComponent<Text>();
     }
 
-    public void ShowFinalScore()
+    internal void ShowFinalScore()
     {
         finalScoreText.text = $"Confirmed Kills: {scoreManager.Score}";
     }

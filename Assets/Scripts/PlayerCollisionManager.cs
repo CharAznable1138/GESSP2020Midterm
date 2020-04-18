@@ -90,7 +90,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 damageSmoke.SetActive(false);
                 HUD.SetActive(false);
                 gameOverScreen.SetActive(true);
-                finalScoreDisplayer.Invoke("ShowFinalScore", 0);
+                finalScoreDisplayer.ShowFinalScore();
             }
         }
         if(collision.gameObject.CompareTag("Medkit"))
