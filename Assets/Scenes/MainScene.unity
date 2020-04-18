@@ -259,6 +259,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7358320598c4a3419cb533d8da4c32e, type: 3}
+--- !u!1 &361854854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 158588, guid: 3407201495b56b440be4e16677cf2316,
+    type: 3}
+  m_PrefabInstance: {fileID: 2120577711}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &361854855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 401600, guid: 3407201495b56b440be4e16677cf2316,
@@ -778,10 +784,14 @@ MonoBehaviour:
   HUD: {fileID: 1465114474}
   gameOverScreen: {fileID: 1879902445}
   finalScoreDisplay: {fileID: 1264982865}
-  deathSmoke: {fileID: 0}
+  deathSmoke: {fileID: 361854854}
   explosion: {fileID: 1297149898}
   damageSmoke: {fileID: 1745557612}
   fire: {fileID: 1062220192}
+  maxHealth: 100
+  healthDecrementer: 10
+  hiHealth: 80
+  loHealth: 50
 --- !u!54 &581379645
 Rigidbody:
   m_ObjectHideFlags: 0

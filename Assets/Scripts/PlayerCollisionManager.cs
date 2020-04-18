@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerCollisionManager : MonoBehaviour
 {
-    private int Health = 100;
+    private float Health;
     private PlayerController playerController;
     private LaunchProjectile Launcher;
     private RotateTurret rotateTurret;
@@ -27,6 +27,14 @@ public class PlayerCollisionManager : MonoBehaviour
     private AudioSource repairNoise;
     [SerializeField] GameObject damageSmoke;
     [SerializeField] GameObject fire;
+    [SerializeField] float maxHealth = 100;
+    [SerializeField] float healthDecrementer = 10;
+    [SerializeField] float hiHealth = 80;
+    [SerializeField] float loHealth = 50;
+    [SerializeField] float minHealth = 0;
+    [SerializeField] Color32 hiHealthColor = new Color32(0, 255, 52, 255);
+    [SerializeField] Color32 medHealthColor = new Color32(255, 227, 0, 255);
+    [SerializeField] Color32 loHealthColor = new Color32(255, 10, 0, 255);
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +45,7 @@ public class PlayerCollisionManager : MonoBehaviour
         rotateTurret = GetComponentInChildren<RotateTurret>();
         medkitSpawnerScript = medkitSpawner.GetComponent<MedkitSpawnManager>();
         healthText = healthDisplay.GetComponent<Text>();
+        Health = maxHealth;
         healthText.text = $"Structural Integrity: {Health}%";
         finalScoreDisplayer = finalScoreDisplay.GetComponent<FinalScoreDisplay>();
         hitSound = GetComponent<AudioSource>();
@@ -48,23 +57,23 @@ public class PlayerCollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Health > 80)
+        if(Health > hiHealth)
         {
-            healthText.color = new Color32(0, 255, 52, 255);
+            healthText.color = hiHealthColor;
             lowHealthNoise.enabled = false;
             damageSmoke.SetActive(false);
             fire.SetActive(false);
         }
-        else if (Health > 50)
+        else if (Health > loHealth)
         {
-            healthText.color = new Color32(255, 227, 0, 255);
+            healthText.color = medHealthColor;
             lowHealthNoise.enabled = false;
             damageSmoke.SetActive(true);
             fire.SetActive(false);
         }
         else
         {
-            healthText.color = new Color32(255, 10, 0, 255);
+            healthText.color = loHealthColor;
             lowHealthNoise.enabled = true;
             damageSmoke.SetActive(false);
             fire.SetActive(true);
@@ -76,20 +85,20 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("EnemyProjectile"))
         {
             Destroy(collision.gameObject);
-            if (Health > 0)
+            if (Health > minHealth)
             {
-                Health -= 10;
+                Health -= healthDecrementer;
                 hitSound.Play();
             }
             else
             {
-                Health = 0;
+                Health = minHealth;
             }
             healthText.text = $"Structural Integrity: {Health}%";
-            if(gameOver == false && Health <= 0)
+            if(gameOver == false && Health <= minHealth)
             {
                 gameOver = true;
-                Health = 0;
+                Health = minHealth;
                 playerController.enabled = false;
                 Launcher.enabled = false;
                 rotateTurret.enabled = false;
@@ -107,17 +116,17 @@ public class PlayerCollisionManager : MonoBehaviour
         if(collision.gameObject.CompareTag("Medkit"))
         {
             Destroy(collision.gameObject);
-            if(Health < 100)
+            if(Health < maxHealth)
             {
                 if (!gameOver)
                 {
                     repairNoise.Play();
                 }
             }
-            Health += 100;
-            if (Health >= 100)
+            Health += maxHealth;
+            if (Health >= maxHealth)
             {
-                Health = 100;
+                Health = maxHealth;
             }
             healthText.text = $"Structural Integrity: {Health}%";
         }
