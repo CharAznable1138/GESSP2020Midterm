@@ -5,9 +5,6 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
-    [SerializeField] float startDelayTop = 1;
-    [SerializeField] float startDelaySides = 5;
-    [SerializeField] float repeatRate = 1;
     [SerializeField] float spawnRangeX = 20;
     [SerializeField] float spawnPosZ = 20.3f;
     [SerializeField] float spawnPosX = 20.3f;
