@@ -57,27 +57,7 @@ public class PlayerCollisionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Health > hiHealth)
-        {
-            healthText.color = hiHealthColor;
-            lowHealthNoise.enabled = false;
-            damageSmoke.SetActive(false);
-            fire.SetActive(false);
-        }
-        else if (Health > loHealth)
-        {
-            healthText.color = medHealthColor;
-            lowHealthNoise.enabled = false;
-            damageSmoke.SetActive(true);
-            fire.SetActive(false);
-        }
-        else
-        {
-            healthText.color = loHealthColor;
-            lowHealthNoise.enabled = true;
-            damageSmoke.SetActive(false);
-            fire.SetActive(true);
-        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -129,6 +109,27 @@ public class PlayerCollisionManager : MonoBehaviour
                 Health = maxHealth;
             }
             healthText.text = $"Structural Integrity: {Health}%";
+        }
+        if (Health > hiHealth)
+        {
+            healthText.color = hiHealthColor;
+            lowHealthNoise.enabled = false;
+            damageSmoke.SetActive(false);
+            fire.SetActive(false);
+        }
+        else if (Health > loHealth)
+        {
+            healthText.color = medHealthColor;
+            lowHealthNoise.enabled = false;
+            damageSmoke.SetActive(true);
+            fire.SetActive(false);
+        }
+        else
+        {
+            healthText.color = loHealthColor;
+            lowHealthNoise.enabled = true;
+            damageSmoke.SetActive(false);
+            fire.SetActive(true);
         }
     }
 }
