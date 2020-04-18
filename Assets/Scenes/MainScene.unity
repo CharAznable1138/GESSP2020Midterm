@@ -792,6 +792,16 @@ MonoBehaviour:
   healthDecrementer: 10
   hiHealth: 80
   loHealth: 50
+  minHealth: 0
+  hiHealthColor:
+    serializedVersion: 2
+    rgba: 4281663232
+  medHealthColor:
+    serializedVersion: 2
+    rgba: 4278248447
+  loHealthColor:
+    serializedVersion: 2
+    rgba: 4278192895
 --- !u!54 &581379645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3385,6 +3395,9 @@ MonoBehaviour:
   spawnPosX: 20.3
   spawnRangeZPosi: 6.5
   spawnRangeZNega: -5
+  minRepeatTime: 1
+  maxRepeatTime: 10
+  player: {fileID: 1878283380}
 --- !u!4 &1958866614
 Transform:
   m_ObjectHideFlags: 0
