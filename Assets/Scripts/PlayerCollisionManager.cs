@@ -35,6 +35,12 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] Color32 hiHealthColor = new Color32(0, 255, 52, 255);
     [SerializeField] Color32 medHealthColor = new Color32(255, 227, 0, 255);
     [SerializeField] Color32 loHealthColor = new Color32(255, 10, 0, 255);
+    [SerializeField] GameObject powerupSpawner;
+    private PowerupSpawnManager powerupSpawnerScript;
+    [SerializeField] Material tankMaterial;
+    [SerializeField] Texture greenTankTexture;
+    [SerializeField] Texture yellowTankTexture;
+    [SerializeField] float powerupTimer = 8;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +58,8 @@ public class PlayerCollisionManager : MonoBehaviour
         gameOver = false;
         lowHealthNoise = healthDisplay.GetComponent<AudioSource>();
         repairNoise = medkitSpawner.GetComponent<AudioSource>();
+        powerupSpawnerScript = powerupSpawner.GetComponent<PowerupSpawnManager>();
+        tankMaterial.mainTexture = greenTankTexture;
     }
 
     // Update is called once per frame
@@ -85,8 +93,14 @@ public class PlayerCollisionManager : MonoBehaviour
                 fire.SetActive(false);
                 explosion.SetActive(true);
                 deathSmoke.SetActive(true);
+                StopAllCoroutines();
+                tankMaterial.mainTexture = greenTankTexture;
                 medkitSpawnerScript.StopAllCoroutines();
+                medkitSpawner.SetActive(false);
                 enemySpawnerScript.StopAllCoroutines();
+                enemySpawner.SetActive(false);
+                powerupSpawnerScript.StopAllCoroutines();
+                powerupSpawner.SetActive(false);
                 damageSmoke.SetActive(false);
                 HUD.SetActive(false);
                 gameOverScreen.SetActive(true);
@@ -110,6 +124,16 @@ public class PlayerCollisionManager : MonoBehaviour
             }
             healthText.text = $"Structural Integrity: {Health}%";
         }
+        if(collision.gameObject.CompareTag("Powerup"))
+        {
+            repairNoise.Play();
+            Destroy(collision.gameObject);
+            StartCoroutine("Powerup");
+            playerController.StartCoroutine("Powerup");
+            Launcher.StartCoroutine("Powerup");
+            powerupSpawnerScript.StartCoroutine("PowerupMusic");
+            
+        }
         if (Health > hiHealth)
         {
             healthText.color = hiHealthColor;
@@ -131,5 +155,13 @@ public class PlayerCollisionManager : MonoBehaviour
             damageSmoke.SetActive(false);
             fire.SetActive(true);
         }
+    }
+
+    IEnumerator Powerup()
+    {
+        tankMaterial.mainTexture = yellowTankTexture;
+        yield return new WaitForSeconds(powerupTimer);
+        tankMaterial.mainTexture = greenTankTexture;
+        yield return null;
     }
 }

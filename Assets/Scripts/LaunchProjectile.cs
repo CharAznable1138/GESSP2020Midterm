@@ -9,6 +9,8 @@ public class LaunchProjectile : MonoBehaviour
     [SerializeField] float delay = 1;
     private bool coolDown;
     [SerializeField] GameObject cooldownDisplay;
+    [SerializeField] float powerupDelayDecrementer = 0.5f;
+    [SerializeField] float powerupTimer = 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,14 @@ public class LaunchProjectile : MonoBehaviour
         yield return new WaitForSeconds(delay);
         coolDown = false;
         cooldownDisplay.SetActive(false);
+        yield return null;
+    }
+
+    internal IEnumerator Powerup()
+    {
+        delay -= powerupDelayDecrementer;
+        yield return new WaitForSeconds(powerupTimer);
+        delay += powerupDelayDecrementer;
         yield return null;
     }
 }

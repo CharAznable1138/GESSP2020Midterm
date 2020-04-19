@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16700001}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.16000009}
+  m_AnchoredPosition: {x: 0, y: 0.15999985}
   m_SizeDelta: {x: 0, y: -0.32000017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47039791
@@ -407,7 +407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16700001}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.1500001}
+  m_AnchoredPosition: {x: 0, y: 0.14999962}
   m_SizeDelta: {x: 0, y: -0.30999994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94394615
@@ -1355,7 +1355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16373314}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.1500001}
+  m_AnchoredPosition: {x: 0, y: 0.14999962}
   m_SizeDelta: {x: 0, y: -0.3000002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487476308
@@ -1432,7 +1432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.29146388}
   m_AnchorMax: {x: 0.99200004, y: 0.845}
-  m_AnchoredPosition: {x: 0.89996004, y: 0.8089981}
+  m_AnchoredPosition: {x: 0.8999634, y: 0.8089981}
   m_SizeDelta: {x: 0.19995022, y: -0.12000275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537924388
@@ -1470,6 +1470,8 @@ MonoBehaviour:
     http://creativecommons.org/licenses/by/4.0/\n\nLevel Music:\nHitman by Kevin MacLeod\r\nLink:
     https://incompetech.filmmusic.io/song/3880-hitman\r\nLicense: http://creativecommons.org/licenses/by/4.0/\n\nGame
     Over Music:\nVirtutes Instrumenti by Kevin MacLeod\r\nLink: https://incompetech.filmmusic.io/song/4590-virtutes-instrumenti\r\nLicense:
+    http://creativecommons.org/licenses/by/4.0/\n\nPowerup Music:\nStrength Of The
+    Titans by Kevin MacLeod\r\nLink: https://incompetech.filmmusic.io/song/5744-strength-of-the-titans\r\nLicense:
     http://creativecommons.org/licenses/by/4.0/"
 --- !u!222 &537924389
 CanvasRenderer:
@@ -1971,7 +1973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16376087}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.059999943}
+  m_AnchoredPosition: {x: 0, y: 0.059999466}
   m_SizeDelta: {x: 0, y: -0.119999886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809276142
@@ -2048,7 +2050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.22453609}
   m_AnchorMax: {x: 0.99100006, y: 0.845}
-  m_AnchoredPosition: {x: 1.39996, y: -0.20000076}
+  m_AnchoredPosition: {x: 1.3999634, y: -0.20000458}
   m_SizeDelta: {x: 1.1999502, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &815120524
@@ -2086,14 +2088,15 @@ MonoBehaviour:
     a3deve@gmail.com)
 
 
-    Projectile Models by AurynSky (Website: http://www.aurynsky.com, Contact: Aurynskygames@gmail.com)
+    Desert terrain texture by Casual2D (Website: http://casual2d.com/, Contact: casual2d@protonmail.com)
+
+
+    Projectile & PowerUp Models by AurynSky (Website: http://www.aurynsky.com, Contact:
+    Aurynskygames@gmail.com)
 
 
     Medkit Models by Archelaus (ArtStation: https://www.artstation.com/archelaus,
     Contact: http://twitter.com/ArchelausAssets)
-
-
-    Cannon firing noise by Gary Qian, AKA Cyberkinetic Films (Youtube: http://www.youtube.com/user/cyberkineticfilms)
 
 
     Particle effects by Moonflower Carnivore (Facebook: https://www.facebook.com/MoonflowerCarnivore,
@@ -2907,7 +2910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.164}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.01999998}
+  m_AnchoredPosition: {x: 0, y: -0.019999504}
   m_SizeDelta: {x: 0, y: 0.05000019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231522755
@@ -3190,7 +3193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16700001}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.1500001}
+  m_AnchoredPosition: {x: 0, y: 0.14999962}
   m_SizeDelta: {x: 0, y: -0.3000002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509658619
@@ -3498,7 +3501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16700001}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.089999914}
+  m_AnchoredPosition: {x: 0, y: -0.09000015}
   m_SizeDelta: {x: 0, y: 0.17999983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712222069
@@ -3910,7 +3913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.20388661}
   m_AnchorMax: {x: 0.9916128, y: 0.845}
-  m_AnchoredPosition: {x: 0.89996004, y: 0.56900024}
+  m_AnchoredPosition: {x: 0.8999634, y: 0.56900024}
   m_SizeDelta: {x: 0.19995022, y: 0.36299896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952391853
@@ -3947,10 +3950,10 @@ MonoBehaviour:
   m_Text: 'Enemy tank explosion sound by FlashTrauma (Freesound: https://freesound.org/people/FlashTrauma/)
 
 
+    Cannon firing noise by Gary Qian, AKA Cyberkinetic Films (Youtube: http://www.youtube.com/user/cyberkineticfilms)
+
+
     Player tank explosion sound by Olivier Girardot, AKA OGsoundFX (Website: http://www.ogsoundfx.com/)
-
-
-    Desert terrain texture by Casual2D (Website: http://casual2d.com/, Contact: casual2d@protonmail.com)
 
 
     Hit sounds by Morgan Purkis (Freesound: https://freesound.org/people/morganpurkis/,
@@ -4003,7 +4006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.15257733}
   m_AnchorMax: {x: 0.99200004, y: 0.845}
-  m_AnchoredPosition: {x: 0.89996004, y: 0.31500053}
+  m_AnchoredPosition: {x: 0.8999634, y: 0.31500244}
   m_SizeDelta: {x: 0.19995022, y: 0.8709984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023752991
@@ -4088,7 +4091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.20038676}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.30999994}
+  m_AnchoredPosition: {x: 0, y: -0.30999947}
   m_SizeDelta: {x: 0, y: 0.61000013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2052459900

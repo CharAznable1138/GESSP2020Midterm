@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     [SerializeField] float speed = 10;
     [SerializeField] float boundary = 20;
+    [SerializeField] float powerupSpeedIncrementer = 10;
+    [SerializeField] float powerupTimer = 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,13 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(-boundary, transform.position.y, transform.position.z);
         }
 
+    }
+
+    internal IEnumerator Powerup()
+    {
+        speed += powerupSpeedIncrementer;
+        yield return new WaitForSeconds(powerupTimer);
+        speed -= powerupSpeedIncrementer;
+        yield return null;
     }
 }

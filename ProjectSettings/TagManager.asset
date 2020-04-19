@@ -10,9 +10,9 @@ TagManager:
   - Projectile
   - Enemy
   - Medkit
-  - SpeedPowerup
   - PlayerChassis
   - PlayerTurret
+  - Powerup
   layers:
   - Default
   - TransparentFX
