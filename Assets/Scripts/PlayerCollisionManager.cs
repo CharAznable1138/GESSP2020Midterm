@@ -84,7 +84,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 rotateTurret.enabled = false;
                 explosion.SetActive(true);
                 deathSmoke.SetActive(true);
-                medkitSpawnerScript.CancelInvoke();
+                medkitSpawnerScript.StopAllCoroutines();
                 enemySpawnerScript.StopAllCoroutines();
                 fire.SetActive(false);
                 damageSmoke.SetActive(false);

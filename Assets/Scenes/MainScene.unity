@@ -577,10 +577,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   medkitPrefab: {fileID: 6255746943056943349, guid: 046511661cad76e489143c6f986dcc51,
     type: 3}
-  startDelay: 10
-  repeatRate: 10
   spawnRangeX: 20
   spawnPosZ: 20.3
+  minRepeatTime: 10
+  maxRepeatTime: 20
+  player: {fileID: 1878283380}
 --- !u!82 &438147806
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3387,9 +3388,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1860040994648527109, guid: d2a0dd9056c5fb443a82565abf1ad981,
     type: 3}
-  startDelayTop: 1
-  startDelaySides: 5
-  repeatRate: 3
   spawnRangeX: 20
   spawnPosZ: 20.3
   spawnPosX: 20.3
