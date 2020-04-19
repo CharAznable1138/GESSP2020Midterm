@@ -82,11 +82,11 @@ public class PlayerCollisionManager : MonoBehaviour
                 playerController.enabled = false;
                 Launcher.enabled = false;
                 rotateTurret.enabled = false;
+                fire.SetActive(false);
                 explosion.SetActive(true);
                 deathSmoke.SetActive(true);
                 medkitSpawnerScript.StopAllCoroutines();
                 enemySpawnerScript.StopAllCoroutines();
-                fire.SetActive(false);
                 damageSmoke.SetActive(false);
                 HUD.SetActive(false);
                 gameOverScreen.SetActive(true);
@@ -124,7 +124,7 @@ public class PlayerCollisionManager : MonoBehaviour
             damageSmoke.SetActive(true);
             fire.SetActive(false);
         }
-        else
+        else if (!gameOver)
         {
             healthText.color = loHealthColor;
             lowHealthNoise.enabled = true;
