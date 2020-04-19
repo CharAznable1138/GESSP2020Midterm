@@ -30,7 +30,6 @@ public class EnemyLaunchProjectile : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
             firingNoise.Play();
             Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            Debug.Log($"Enemy has fired projectile after waiting {waitTime} seconds.");
         }
     }
 }
