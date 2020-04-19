@@ -30,13 +30,11 @@ public class LaunchProjectile : MonoBehaviour
 
     IEnumerator Cooldown()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            coolDown = true;
-            cooldownDisplay.SetActive(true);
-            yield return new WaitForSeconds(delay);
-            coolDown = false;
-            cooldownDisplay.SetActive(false);
-        }
+        coolDown = true;
+        cooldownDisplay.SetActive(true);
+        yield return new WaitForSeconds(delay);
+        coolDown = false;
+        cooldownDisplay.SetActive(false);
+        yield return null;
     }
 }
