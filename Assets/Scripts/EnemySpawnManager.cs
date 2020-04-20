@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour
@@ -21,12 +20,6 @@ public class EnemySpawnManager : MonoBehaviour
         StartCoroutine("SpawnEnemyTop");
         StartCoroutine("SpawnEnemyLeft");
         StartCoroutine("SpawnEnemyRight");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator SpawnEnemyTop()

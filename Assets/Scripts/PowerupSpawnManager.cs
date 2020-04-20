@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerupSpawnManager : MonoBehaviour
@@ -22,12 +21,6 @@ public class PowerupSpawnManager : MonoBehaviour
         StartCoroutine("SpawnPowerup");
         powerupMusic = GetComponent<AudioSource>();
         levelMusic = HUD.GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     IEnumerator SpawnPowerup()

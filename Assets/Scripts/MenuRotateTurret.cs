@@ -1,16 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuRotateTurret : MonoBehaviour
 {
     [SerializeField] float turnSpeed = 10;
     [SerializeField] float turnLimit = 45;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

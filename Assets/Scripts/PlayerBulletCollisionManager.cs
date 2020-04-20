@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class PlayerBulletCollisionManager : MonoBehaviour
 {
@@ -12,12 +9,6 @@ public class PlayerBulletCollisionManager : MonoBehaviour
     {
         scoreDisplay = GameObject.Find("ScoreDisplay");
         scoreManager = scoreDisplay.GetComponent<ScoreManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)

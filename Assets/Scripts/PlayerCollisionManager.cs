@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,12 +62,6 @@ public class PlayerCollisionManager : MonoBehaviour
         powerupSpawnerScript = powerupSpawner.GetComponent<PowerupSpawnManager>();
         tankMaterial.mainTexture = greenTankTexture;
         engineNoise = tankParent.GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)

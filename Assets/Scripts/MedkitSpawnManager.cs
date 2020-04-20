@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MedkitSpawnManager : MonoBehaviour
@@ -16,12 +15,6 @@ public class MedkitSpawnManager : MonoBehaviour
     {
         playerCollisionManager = player.GetComponentInChildren<PlayerCollisionManager>();
         StartCoroutine("SpawnMedkit");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator SpawnMedkit()

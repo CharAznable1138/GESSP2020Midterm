@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyLaunchProjectile : MonoBehaviour
@@ -14,12 +13,6 @@ public class EnemyLaunchProjectile : MonoBehaviour
     {
         firingNoise = GetComponent<AudioSource>();
         StartCoroutine("LaunchProjectile");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator LaunchProjectile()
