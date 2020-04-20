@@ -25,7 +25,7 @@ public class EnemyTurretAim : MonoBehaviour
         else
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            bulletSpawner.CancelInvoke();
+            bulletSpawner.StopAllCoroutines();
         }
     }
 
