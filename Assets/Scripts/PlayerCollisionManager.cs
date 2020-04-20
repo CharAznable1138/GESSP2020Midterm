@@ -126,12 +126,19 @@ public class PlayerCollisionManager : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Powerup"))
         {
-            repairNoise.Play();
-            Destroy(collision.gameObject);
-            StartCoroutine("Powerup");
-            playerController.StartCoroutine("Powerup");
-            Launcher.StartCoroutine("Powerup");
-            powerupSpawnerScript.StartCoroutine("PowerupMusic");
+            if (!gameOver)
+            {
+                repairNoise.Play();
+                Destroy(collision.gameObject);
+                StartCoroutine("Powerup");
+                playerController.StartCoroutine("Powerup");
+                Launcher.StartCoroutine("Powerup");
+                powerupSpawnerScript.StartCoroutine("PowerupMusic");
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
             
         }
         if (Health > hiHealth)
