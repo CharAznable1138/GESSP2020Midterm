@@ -41,6 +41,8 @@ public class PlayerCollisionManager : MonoBehaviour
     [SerializeField] Texture greenTankTexture;
     [SerializeField] Texture yellowTankTexture;
     [SerializeField] float powerupTimer = 8;
+    [SerializeField] GameObject tankParent;
+    private AudioSource engineNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,7 @@ public class PlayerCollisionManager : MonoBehaviour
         repairNoise = medkitSpawner.GetComponent<AudioSource>();
         powerupSpawnerScript = powerupSpawner.GetComponent<PowerupSpawnManager>();
         tankMaterial.mainTexture = greenTankTexture;
+        engineNoise = tankParent.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,6 +105,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 powerupSpawnerScript.StopAllCoroutines();
                 powerupSpawner.SetActive(false);
                 damageSmoke.SetActive(false);
+                engineNoise.enabled = false;
                 HUD.SetActive(false);
                 gameOverScreen.SetActive(true);
                 finalScoreDisplayer.Invoke("ShowFinalScore", 0);

@@ -3963,7 +3963,10 @@ MonoBehaviour:
     Low health alert sound by ThisUsernameIs (Freesound: https://freesound.org/people/thisusernameis/)
 
 
-    Medkit pickup sound by SevenBSB (Freesound: https://freesound.org/people/sevenbsb/)'
+    Medkit pickup sound by SevenBSB (Freesound: https://freesound.org/people/sevenbsb/)
+
+
+    Tank engine noise by Alan Geldart (Freesound: https://freesound.org/people/Geldart/)'
 --- !u!222 &1952391854
 CanvasRenderer:
   m_ObjectHideFlags: 0
